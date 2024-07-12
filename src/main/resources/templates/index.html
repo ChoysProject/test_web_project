@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Index Page</title>
+</head>
+<body>
+    <h1>Index Page</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>이름</th>
+                <th>담당자</th>
+                <th>전화번호</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="employee : ${employeeModelList}">
+                <td th:text="${employee.emp}"></td>
+                <td th:text="${employee.manager}"></td>
+                <td th:text="${employee.empTel}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
